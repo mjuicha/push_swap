@@ -6,7 +6,7 @@
 /*   By: mjuicha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 19:26:42 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/06/23 19:07:33 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/06/24 18:24:34 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,15 @@ t_stack	*loop(t_stack *sta, int *pi, t_stack **a, t_stack **b)
 	{
 		refill(a, b, &sta, &stb);
 		node = choosing(&sta, i);
-		fprintf(stdout, "before:::::%d::::::[%d];;;;;;....%d\n",i,node->value,c);
 		done_a(&sta, node, &c, &stb);
 		done_b(&sta, &stb, &c);
-		fprintf(stdout, "after:::::%d::::::[%d];;;;;;....%d\n",i,node->value,c);
 		if (tr == -1 || c > tr)
 			tr = new_winner(node, &winner_node, &c);
 		refill(a, b, &sta, &stb);
 		c = *pi;
 		i++;
 	}
-	return (free_stacks(sta, stb), fprintf(stdout, ">>>>>>>>>>>>>>>>>>>>>>%d>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>%d\n",c,winner_node->value),winner_node);
+	return (free_stacks(sta, stb), winner_node);
 }
 
 t_stack	*store_stack(t_stack *new)

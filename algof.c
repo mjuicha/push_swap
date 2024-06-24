@@ -6,7 +6,7 @@
 /*   By: mjuicha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 16:04:10 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/06/23 18:44:10 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/06/24 18:19:17 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,6 @@ void	logic(t_stack **a, t_stack **b)
 		first_push(&sta, &stb, &c);
 	while (count_stack(&sta) > 3)
 		class_b(&sta, &stb, &c);
-	print(sta);
 	if (count_stack(&sta) <= 3)
 		less_3(&sta);
 	*a = sta;

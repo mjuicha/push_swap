@@ -6,7 +6,7 @@
 /*   By: mjuicha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 14:02:30 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/06/23 19:16:14 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/06/24 18:33:15 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ void	done_a(t_stack **a, t_stack *node, int *pi, t_stack **b)
 		if (node == NULL)
 			return ;
 		else if (node->index > size_a / 2 && br(*a, *b))
-			rrr1(sta, a, b, &c);
+			rrr0(sta, a, b, &c);
 		else if (node->index <= size_a / 2 && br1(*a, *b))
-			rr1(sta, a, b, &c);
+			rr0(sta, a, b, &c);
 		else if (node->index <= size_a / 2)
 			ra(sta, &c, 0);
 		else if (node->index > size_a / 2)

@@ -6,7 +6,7 @@
 /*   By: mjuicha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 15:37:04 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/06/23 17:15:54 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/06/24 18:31:05 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,7 +127,7 @@ char		*read_line(int fd, char *str);
 /*checker prototype*/
 int			main(int ac, char *av[]);
 void		my_algo(t_stack **a, t_stack **b);
-void		xxxx(t_stack **a, char *av, int *pt);
+void		pusher(t_stack **a, char *av, int *pt);
 void		do_it(char *s, t_stack **a, t_stack **b, int i);
 int			correct_input(char *s);
 void		doswap(char *s, t_stack **a, t_stack **b);

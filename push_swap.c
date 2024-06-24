@@ -6,7 +6,7 @@
 /*   By: mjuicha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 15:40:48 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/06/23 17:14:43 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/06/24 18:31:30 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	main(int ac, char **av)
 	if (check_input(ac, av) == 0)
 	{
 		while (av[i] != NULL && !c)
-			xxxx(&stack_a, av[i++], &c);
+			pusher(&stack_a, av[i++], &c);
 		if (!c)
 			algorithem(&stack_a, &stack_b);
 	}
