@@ -134,4 +134,5 @@ void		doswap(char *s, t_stack **a, t_stack **b);
 void		dorot(char *s, t_stack **a, t_stack **b);
 void		dorrot(char *s, t_stack **a, t_stack **b);
 void		dopush(char *s, t_stack **a, t_stack **b);
+void		check_over(long long int i, int *pt);
 #endif

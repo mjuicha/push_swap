@@ -6,7 +6,7 @@
 /*   By: mjuicha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 15:41:08 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/06/22 12:17:27 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/06/24 17:19:47 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int	check_rep(t_stack *a, t_stack *b)
 	return (0);
 }
 
-void	xxxx(t_stack **a, char *av, int *pt)
+void	pusher(t_stack **a, char *av, int *pt)
 {
 	t_stack	*stack_a;
 	t_stack	*stack_r;
