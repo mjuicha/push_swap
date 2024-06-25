@@ -6,13 +6,13 @@
 /*   By: mjuicha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 15:40:57 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/05/11 13:27:07 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/06/25 16:47:57 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	count_words(char *s, char c)
+int	count_words(char *s, char c)
 {
 	int	count;
 
@@ -31,7 +31,7 @@ static int	count_words(char *s, char c)
 	return (count);
 }
 
-static char	*get_word(char *s, char c)
+char	*get_word(char *s, char c)
 {
 	char	*word;
 	size_t	len;
@@ -53,7 +53,7 @@ static char	*get_word(char *s, char c)
 	return (word);
 }
 
-static void	*ft_free(char **arr, int n)
+void	*ft_free(char **arr, int n)
 {
 	int	i;
 

@@ -6,20 +6,20 @@
 /*   By: mjuicha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 13:24:39 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/06/19 13:42:12 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/06/25 16:46:53 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	isoverflow(long long int check, long long int res)
+int	isoverflow(long long int check, long long int res)
 {
 	if (res / 10 == check)
 		return (0);
 	return (1);
 }
 
-static int	max_int(long long int r, int s)
+int	max_int(long long int r, int s)
 {
 	if ((s == 1 && r > INT_MAX) || (s == -1 && - r < INT_MIN))
 	{
@@ -29,7 +29,7 @@ static int	max_int(long long int r, int s)
 	return (0);
 }
 
-static int	is_sspace( char *str, int *pt)
+int	is_sspace( char *str, int *pt)
 {
 	int	i;
 	int	retsi;

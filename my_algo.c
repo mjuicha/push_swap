@@ -6,7 +6,7 @@
 /*   By: mjuicha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 17:05:57 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/06/20 12:14:32 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/06/25 17:44:18 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	my_algo(t_stack **a, t_stack **b)
 		s = get_next_line(0);
 	}
 	if (s && !correct_input(s))
-		write(1, "Error\n", 6);
+		write(2, "Error\n", 6);
 	else if (check_asc(a) == 0 && *b == NULL)
 		write(1, "OK\n", 3);
 	else

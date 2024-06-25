@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   algof.c                                            :+:      :+:    :+:   */
+/*   algo.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mjuicha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 16:04:10 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/06/24 18:19:17 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/06/25 17:48:53 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,11 +94,6 @@ void	algorithem(t_stack **a, t_stack **b)
 	logic(&sta, &stb);
 	if (stb == NULL)
 		return ;
-	if (check_asc(&sta) == 1)
-	{
-		printf("error");
-		return ;
-	}
 	else
 		class_a(&sta, &stb);
 	if (check_asc(&sta))

@@ -6,13 +6,12 @@
 /*   By: mjuicha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 15:41:20 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/06/23 19:20:21 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/06/25 19:32:21 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-extern t_stack *bs;
 void	refill(t_stack **a, t_stack **b, t_stack **sa, t_stack **sb)
 {
 	t_stack	*sta;
@@ -28,7 +27,7 @@ void	refill(t_stack **a, t_stack **b, t_stack **sa, t_stack **sb)
 	*sb = stb;
 }
 
-t_stack	*br(t_stack *a, t_stack *b)
+t_stack	*rrboth(t_stack *a, t_stack *b)
 {
 	t_stack	*sec;
 	int		size_b;
@@ -42,7 +41,7 @@ t_stack	*br(t_stack *a, t_stack *b)
 	return (NULL);
 }
 
-t_stack	*br1(t_stack *a, t_stack *b)
+t_stack	*rboth(t_stack *a, t_stack *b)
 {
 	t_stack	*sec;
 	int		size_b;

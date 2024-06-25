@@ -6,7 +6,7 @@
 /*   By: mjuicha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 15:41:06 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/06/23 17:16:23 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/06/25 17:20:14 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,4 @@ t_stack	*push_stack(t_stack **a, char *av)
 		new->prev = temp;
 	}
 	return (new);
-}
-
-void	print(t_stack *a)
-{
-	while (a != NULL)
-	{
-		printf("%d->", a->value);
-		a = a->next;
-	}
-	write(1, "\n", 1);
 }
