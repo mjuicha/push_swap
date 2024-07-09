@@ -6,7 +6,7 @@
 /*   By: mjuicha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 16:59:30 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/06/25 19:37:21 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/07/09 01:41:47 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,6 +126,8 @@ void		do_b(t_stack *a, t_stack **b, int *pi);
 int			correct_input(char *s);
 void		do_it(char *s, t_stack **a, t_stack **b, int i);
 void		my_algo(t_stack **a, t_stack **b);
+int			ft_strcmp(char *s1, char *s2);
+
 //do.c
 void		doswap(char *s, t_stack **a, t_stack **b);
 void		dorot(char *s, t_stack **a, t_stack **b);
@@ -141,4 +143,5 @@ size_t		ft_strlen(char *s);
 char		*empty_str(void);
 char		*ft_strchr(const char *str, int c);
 char		*ft_strjoin(char *str, char *buffer);
+
 #endif

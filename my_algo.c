@@ -6,25 +6,35 @@
 /*   By: mjuicha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 17:05:57 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/06/25 17:44:18 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/07/09 01:41:12 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+int	ft_strcmp(char *s1, char *s2)
+{
+	int	x;
+
+	x = 0;
+	while (s1[x] && s2[x] && s1[x] == s2[x])
+		x++;
+	return (s1[x] - s2[x]);
+}
+
 int	correct_input(char *s)
 {
 	int	i;
 
-	if (strcmp(s, "sa") == 0 || strcmp(s, "sb") == 0 || strcmp(s, "ss") == 0)
+	if (ft_strcmp(s, "sa") == 0 || ft_strcmp(s, "sb") == 0 || ft_strcmp(s, "ss") == 0)
 		i = 1;
-	else if (strcmp(s, "ra") == 0 || strcmp(s, "rb") == 0
-		|| strcmp(s, "rr") == 0)
+	else if (ft_strcmp(s, "ra") == 0 || ft_strcmp(s, "rb") == 0
+		|| ft_strcmp(s, "rr") == 0)
 		i = 2;
-	else if (strcmp(s, "rra") == 0 || strcmp(s, "rrb") == 0
-		|| strcmp(s, "rrr") == 0)
+	else if (ft_strcmp(s, "rra") == 0 || ft_strcmp(s, "rrb") == 0
+		|| ft_strcmp(s, "rrr") == 0)
 		i = 3;
-	else if (strcmp(s, "pa") == 0 || strcmp(s, "pb") == 0)
+	else if (ft_strcmp(s, "pa") == 0 || ft_strcmp(s, "pb") == 0)
 		i = 4;
 	else
 		i = 0;
