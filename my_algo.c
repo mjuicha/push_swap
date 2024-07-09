@@ -6,7 +6,7 @@
 /*   By: mjuicha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 17:05:57 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/07/09 01:41:12 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/07/09 01:56:22 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ int	correct_input(char *s)
 {
 	int	i;
 
-	if (ft_strcmp(s, "sa") == 0 || ft_strcmp(s, "sb") == 0 || ft_strcmp(s, "ss") == 0)
+	if (ft_strcmp(s, "sa") == 0 || ft_strcmp(s, "sb") == 0
+		|| ft_strcmp(s, "ss") == 0)
 		i = 1;
 	else if (ft_strcmp(s, "ra") == 0 || ft_strcmp(s, "rb") == 0
 		|| ft_strcmp(s, "rr") == 0)

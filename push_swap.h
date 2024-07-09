@@ -6,7 +6,7 @@
 /*   By: mjuicha <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 16:59:30 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/07/09 01:41:47 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/07/09 01:54:58 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 
 # include <stdio.h>
 # include <stdlib.h>
-# include <string.h>
 # include <unistd.h>
 # include <limits.h>
-# include <string.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
