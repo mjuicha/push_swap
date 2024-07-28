@@ -6,7 +6,7 @@
 /*   By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 10:42:58 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/07/28 16:43:29 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/07/28 17:10:06 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	ft_isdigit(int c);
 int	isoverflow(long long int check, long long int res);
 int	is_sspace( char *str, int *pt);
 int	max_int(long long int r, int s, t_stack **stack);
-int	ft_atoi(char *str, t_stack **stack);
+long int	ft_atoi(char *str, t_stack **stack);
 void free_2d_array(char **av);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strdup(const char *s1);

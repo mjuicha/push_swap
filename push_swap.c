@@ -6,16 +6,16 @@
 /*   By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 15:14:30 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/07/28 16:39:15 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/07/28 16:58:52 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void f()
-{
-    system("leaks a.out");
-}
+// void f()
+// {
+//     system("leaks a.out");
+// }
 
 void free_2d_array(char **av)
 {
@@ -43,5 +43,5 @@ int main(int ac, char **av)
     fill_stack(&stack_a, av);
     free_stack(stack_a);
     free_2d_array(av);
-    atexit(f);
+    // atexit(f);
 }

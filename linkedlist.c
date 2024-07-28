@@ -6,7 +6,7 @@
 /*   By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 10:29:12 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/07/28 12:24:38 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/07/28 16:59:30 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,10 +66,8 @@ void    free_stack(t_stack *stack)
 
     while (stack)
     {
-        printf("%d\n", stack->value);
         tmp = stack;
         stack = stack->next;
         free(tmp);
     }
-    printf("free\n");
 }

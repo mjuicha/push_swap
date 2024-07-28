@@ -6,7 +6,7 @@
 /*   By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 10:39:07 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/07/28 11:36:52 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/07/28 17:09:54 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	is_sspace( char *str, int *pt)
 	return (retsi);
 }
 
-int	ft_atoi(char *str, t_stack **stack)
+long int	ft_atoi(char *str, t_stack **stack)
 {
 	long long int	r;
 	int				s;

@@ -6,7 +6,7 @@
 /*   By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 15:18:54 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/07/28 16:51:02 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/07/28 17:15:11 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,11 +91,15 @@ void    check_dup_and_over(t_stack **stack)
 void    fill_stack(t_stack **stack, char **av)
 {
        int i;
+       long int res;
     
         i = 0;
         while (av[i])
         {
-            ft_lstadd_back(stack, ft_lstnew(ft_atoi(av[i], stack)));
+            res = ft_atoi(av[i], stack);
+            if (res > INT_MAX || res < INT_MIN)
+                push_swap_error(stack);
+            ft_lstadd_back(stack, ft_lstnew(res));
             i++;
         }
         check_dup_and_over(stack);
