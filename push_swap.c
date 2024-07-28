@@ -6,11 +6,29 @@
 /*   By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 15:14:30 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/07/27 16:51:49 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/07/28 16:39:15 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void f()
+{
+    system("leaks a.out");
+}
+
+void free_2d_array(char **av)
+{
+    int i;
+
+    i = 0;
+    while (av[i])
+    {
+        free(av[i]);
+        i++;
+    }
+    free(av);
+}
 
 int main(int ac, char **av)
 {
@@ -21,6 +39,9 @@ int main(int ac, char **av)
     stack_b = NULL;
     if (ac == 1)
         return (0);
-    av = ft_check_args(ac, av);
+    av = ft_check_args(av);
     fill_stack(&stack_a, av);
+    free_stack(stack_a);
+    free_2d_array(av);
+    atexit(f);
 }
