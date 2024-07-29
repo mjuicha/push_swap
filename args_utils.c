@@ -6,7 +6,7 @@
 /*   By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 10:39:07 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/07/28 17:09:54 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/07/29 18:43:17 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,4 +72,18 @@ long int	ft_atoi(char *str, t_stack **stack)
 	if (l > 10)
 		push_swap_error(stack);
 	return (r * s);
+}
+
+int     check_sorted(t_stack *stack)
+{
+    t_stack *tmp;
+
+    tmp = stack;
+    while (tmp->next)
+    {
+        if (tmp->value > tmp->next->value)
+            return (0);
+        tmp = tmp->next;
+    }
+    return (1);
 }
