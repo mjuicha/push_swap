@@ -3,91 +3,70 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mjuicha <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/08 15:40:57 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/06/25 16:47:57 by mjuicha          ###   ########.fr       */
+/*   Created: 2024/07/28 10:42:09 by mjuicha           #+#    #+#             */
+/*   Updated: 2024/08/01 21:22:15 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	count_words(char *s, char c)
+size_t	ft_strlen(char *s)
 {
-	int	count;
-
-	count = 0;
-	while (*s)
-	{
-		while (*s == c)
-			s++;
-		if (*s)
-		{
-			count++;
-			while (*s && *s != c)
-				s++;
-		}
-	}
-	return (count);
-}
-
-char	*get_word(char *s, char c)
-{
-	char	*word;
-	size_t	len;
 	size_t	i;
 
 	i = 0;
-	len = 0;
-	while (s[len] && s[len] != c)
-		len++;
-	word = (char *)malloc(len + 1);
-	if (word == NULL)
-		return (NULL);
-	while (i < len)
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
+
+char	*ft_strdup(char *s1)
+{
+	char	*s;
+	size_t	i;
+	size_t	j;
+
+	i = ft_strlen(s1);
+	s = (char *)malloc(sizeof(char) * i + 1);
+	if (!s)
+		return (0);
+	j = 0;
+	while (j < i)
 	{
-		word[i] = s[i];
+		s[j] = s1[j];
+		j++;
+	}
+	s[j] = '\0';
+	return (s);
+}
+
+char	*ft_strjoin(char *s1, char *s2)
+{
+	char	*nstr;
+	size_t	len;
+	size_t	i;
+	size_t	j;
+
+	if (!s1)
+		return (ft_strdup(""));
+	len = ft_strlen(s1) + ft_strlen(s2);
+	nstr = (char *)malloc(sizeof(char) * len + 1);
+	i = 0;
+	while (s1[i])
+	{
+		nstr[i] = s1[i];
 		i++;
 	}
-	word[len] = '\0';
-	return (word);
-}
-
-void	*ft_free(char **arr, int n)
-{
-	int	i;
-
-	i = 0;
-	while (i < n)
-		free(arr[i++]);
-	free(arr);
-	return (NULL);
-}
-
-char	**ft_split(char *s, char c)
-{
-	char	**spl;
-	int		i;
-
-	i = 0;
-	if (!s)
-		return (NULL);
-	spl = (char **)malloc((count_words(s, c) + 1) * sizeof(char *));
-	if (spl == NULL)
-		return (NULL);
-	while (*s)
+	j = 0;
+	while (s2[j])
 	{
-		while (*s == c)
-			s++;
-		if (*s)
-		{
-			spl[i++] = get_word(s, c);
-			if (!spl[i - 1])
-				return (ft_free(spl, i - 1));
-			while (*s && *s != c)
-				s++;
-		}
+		nstr[i] = s2[j];
+		i++;
+		j++;
 	}
-	spl[i] = NULL;
-	return (spl);
+	nstr[i] = '\0';
+	free((char *)s1);
+	return (nstr);
 }

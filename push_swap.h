@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mjuicha <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 16:59:30 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/07/09 01:54:58 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/08/01 15:47:57 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,6 @@ typedef struct s_stack
 }					t_stack;
 
 //utils.c
-int			count_words(char *s, char c);
-char		*get_word(char *s, char c);
-void		*ft_free(char **arr, int n);
 char		**ft_split(char *s, char c);
 //checker.c
 int			check_input(int ac, char **av);
@@ -141,5 +138,17 @@ size_t		ft_strlen(char *s);
 char		*empty_str(void);
 char		*ft_strchr(const char *str, int c);
 char		*ft_strjoin(char *str, char *buffer);
+
+t_stack	*ft_lstlast(t_stack *lst);
+void	ft_lstadd_back(t_stack **lst, t_stack *new);
+t_stack	*ft_lstnew(int content);
+int	ft_lstsize(t_stack *lst);
+void	ft_error(void);
+void	push_swap_error(t_stack **stack);
+void	fill_stack(t_stack **stack, char **av);
+char	*ft_strdup(char *s1);
+char	*ft_strjoin(char *s1, char *s2);
+char	**ft_check_args(char **av);
+//
 
 #endif

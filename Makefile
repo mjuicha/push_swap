@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mjuicha <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/25 14:09:38 by mjuicha           #+#    #+#              #
-#    Updated: 2024/06/25 17:38:14 by mjuicha          ###   ########.fr        #
+#    Updated: 2024/08/01 21:08:59 by mjuicha          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,11 +21,11 @@ NAME1 = push_swap
 NAME2 = checker
 
 SRC = algo.c checker.c class_b.c class_utils2.c ft_atoi.c hypo.c push_stack.c r_rotate.c real.c rotate_stacks.c utils.c algo_utils.c class2.c class_utils1.c class_utils3.c ft_isdigit.c push.c \
-		rab.c rotate.c  swap.c \
+		rab.c rotate.c  swap.c main_utils.c linkedlist.c  ft_split.c\
 
 SRCM = push_swap.c
 
-SRCB = my_checker.c my_algo.c do.c get_next_line.c get_next_line_utils.c
+SRCB = my_checker.c my_algo.c do.c get_next_line.c get_next_line_utils.c 
 
 OBJ = $(SRC:%.c=%.o)
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   hypo.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mjuicha <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 14:02:30 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/06/25 17:28:30 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/08/01 16:25:10 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,13 @@ void	done_a(t_stack **a, t_stack *node, int *pi, t_stack **b)
 	size_a = count_stack(sta);
 	while (*sta != NULL && (*sta)->value != node->value)
 	{
+		(void)b;
 		if (node == NULL)
 			return ;
-		else if (node->index > size_a / 2 && rrboth(*a, *b))
-			rrr0(sta, a, b, &c);
-		else if (node->index <= size_a / 2 && rboth(*a, *b))
-			rr0(sta, a, b, &c);
+		// else if (node->index > size_a / 2 && rrboth(*a, *b))
+		// 	rrr0(sta, a, b, &c);
+		// else if (node->index <= size_a / 2 && rboth(*a, *b))
+		// 	rr0(sta, a, b, &c);
 		else if (node->index <= size_a / 2)
 			ra(sta, &c, 0);
 		else if (node->index > size_a / 2)
