@@ -3,24 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mjuicha <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 08:50:27 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/06/16 16:17:27 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/08/02 16:11:31 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-size_t	ft_strlen(char *s)
-{
-	size_t	i;
+// size_t	ft_strlen(char *s)
+// {
+// 	size_t	i;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
+// 	i = 0;
+// 	while (s[i])
+// 		i++;
+// 	return (i);
+// }
 
 char	*empty_str(void)
 {
@@ -47,31 +47,31 @@ char	*ft_strchr(const char *str, int c)
 	return ((char *)&str[x]);
 }
 
-char	*ft_strjoin(char *str, char *buffer)
-{
-	char	*s;
-	int		i;
-	int		j;
+// char	*ft_strjoin(char *str, char *buffer)
+// {
+// 	char	*s;
+// 	int		i;
+// 	int		j;
 
-	i = 0;
-	j = 0;
-	if (!str && !buffer)
-		return (NULL);
-	if (str == NULL)
-		str = "";
-	if (buffer == NULL)
-		buffer = "";
-	s = (char *)malloc(sizeof(char) * (ft_strlen(str) + ft_strlen(buffer) + 1));
-	if (!s)
-		return (0);
-	while (str[i])
-	{
-		s[i] = str[i];
-		i++;
-	}
-	while (buffer[j])
-		s[i++] = buffer[j++];
-	s[i] = '\0';
-	free(str);
-	return (s);
-}
+// 	i = 0;
+// 	j = 0;
+// 	if (!str && !buffer)
+// 		return (NULL);
+// 	if (str == NULL)
+// 		str = "";
+// 	if (buffer == NULL)
+// 		buffer = "";
+// 	s = (char *)malloc(sizeof(char) * (ft_strlen(str) + ft_strlen(buffer) + 1));
+// 	if (!s)
+// 		return (0);
+// 	while (str[i])
+// 	{
+// 		s[i] = str[i];
+// 		i++;
+// 	}
+// 	while (buffer[j])
+// 		s[i++] = buffer[j++];
+// 	s[i] = '\0';
+// 	free(str);
+// 	return (s);
+// }

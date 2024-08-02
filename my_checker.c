@@ -3,37 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   my_checker.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mjuicha <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 16:17:55 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/06/25 14:58:33 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/08/02 16:34:36 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+void   l()
+{
+	system("leaks checker");
+}
 int	main(int ac, char *av[])
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
-	int		i;
-	int		c;
 
+	if (ac == 1)
+		return (0);
 	stack_a = NULL;
 	stack_b = NULL;
-	i = 1;
-	c = 0;
-	if (ac == 2)
-	{
-		av = ft_split(av[1], ' ');
-		i = 0;
-	}
-	if (check_input(ac, av) == 0)
-	{
-		while (av[i] != NULL && !c)
-			pusher(&stack_a, av[i++], &c);
-		if (!c)
-			my_algo(&stack_a, &stack_b);
-	}
+	av = ft_check_args(av);
+	fill_stack(&stack_a, av);
+	my_algo(&stack_a, &stack_b);
+	free_2d_array(av);
+	free_stack(stack_a);
+	free_stack(stack_b);
+	atexit(l);
 	return (0);
 }

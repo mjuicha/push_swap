@@ -6,7 +6,7 @@
 /*   By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 16:59:30 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/08/01 15:47:57 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/08/02 16:23:14 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,5 +150,7 @@ char	*ft_strdup(char *s1);
 char	*ft_strjoin(char *s1, char *s2);
 char	**ft_check_args(char **av);
 //
+void	free_2d_array(char **av);
+
 
 #endif

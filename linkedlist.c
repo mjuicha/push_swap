@@ -6,12 +6,25 @@
 /*   By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 10:29:12 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/08/01 15:30:11 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/08/02 16:23:53 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+
+void	free_2d_array(char **av)
+{
+	int	i;
+
+	i = 0;
+	while (av[i])
+	{
+		free(av[i]);
+		i++;
+	}
+	free(av);
+}
 //return the last element of the list
 t_stack	*ft_lstlast(t_stack *lst)
 {

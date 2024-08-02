@@ -6,7 +6,7 @@
 /*   By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 16:04:10 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/08/01 23:26:09 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/08/02 15:26:12 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -160,6 +160,13 @@ void	logic(t_stack **a, t_stack **b)
 	sta = *a;
 	stb = *b;
 	c = count_stack(&sta);
+	if ( c == 4 || c == 5)
+	{
+		spec(&sta, &stb);
+		*a = sta;
+		*b = stb;
+		return ;
+	}
 	if (c > 3 && stb == NULL)
 		first_push(&sta, &stb, &c);
 	while (count_stack(&sta) > 3)
