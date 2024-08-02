@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mjuicha <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 13:24:39 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/06/25 16:46:53 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/08/02 17:36:13 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	max_int(long long int r, int s)
 	if ((s == 1 && r > INT_MAX) || (s == -1 && - r < INT_MIN))
 	{
 		write(2, "Error\n", 6);
-		exit (1);
+		exit (0);
 	}
 	return (0);
 }

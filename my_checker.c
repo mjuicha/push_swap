@@ -6,16 +6,17 @@
 /*   By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 16:17:55 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/08/02 16:34:36 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/08/02 20:23:47 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void   l()
-{
-	system("leaks checker");
-}
+// void   l()
+// {
+// 	system("leaks checker");
+// }
+
 int	main(int ac, char *av[])
 {
 	t_stack	*stack_a;
@@ -31,6 +32,5 @@ int	main(int ac, char *av[])
 	free_2d_array(av);
 	free_stack(stack_a);
 	free_stack(stack_b);
-	atexit(l);
 	return (0);
 }

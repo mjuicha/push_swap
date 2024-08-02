@@ -6,7 +6,7 @@
 /*   By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 17:51:53 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/08/01 22:17:45 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/08/02 19:25:40 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	class_b(t_stack **a, t_stack **b, int *pi)
 		clever = clever_chosing(a, b, pi);
 	if (clever == NULL)
 		return ;
-	do_a(a, clever, pi, b);
+	do_a(a, clever, pi);
 	do_b(*a, b, pi);
 	push_b(a, b, 1);
 	(*pi)--;

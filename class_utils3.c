@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   class_utils3.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mjuicha <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 19:26:42 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/06/25 19:36:49 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/08/02 19:34:41 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ t_stack	*loop(t_stack *sta, int *pi, t_stack **a, t_stack **b)
 	{
 		refill(a, b, &sta, &stb);
 		node = choosing(&sta, i++);
-		done_a(&sta, node, &c, &stb);
+		done_a(&sta, node, &c);
 		done_b(&sta, &stb, &c);
 		if (winner_node == NULL || c > winner_node->best_score)
 			winner_node->best_score = new_winner(node, &winner_node, &c);

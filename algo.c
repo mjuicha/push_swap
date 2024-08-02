@@ -6,7 +6,7 @@
 /*   By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 16:04:10 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/08/02 15:26:12 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/08/02 19:18:53 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,96 +61,6 @@ void	less_3(t_stack **sta)
 		swap_a(sta, 1);
 }
 
-void    sort_4(t_stack **stack_a, t_stack **stack_b)
-{
-    t_stack	*tmp;
-
-    tmp = *stack_a;
-    while (tmp)
-    {
-        if (tmp->index == 0)
-            break ;
-        else if (ft_lstlast(*stack_a)->index == 0)
-            r_rot_a(stack_a, 1);
-        else
-            rot_a(stack_a, 1);
-        tmp = *stack_a;
-    }
-    push_b(stack_a, stack_b, 1);
-    if (check_asc(stack_a))
-        sort_three(stack_a);
-    push_a(stack_a, stack_b, 1);
-}
-
-void    sort_5(t_stack **stack_a, t_stack **stack_b)
-{
-    t_stack	*tmp;
-
-    tmp = *stack_a;
-    while (tmp)
-    {
-        if (tmp->index == 1)
-            break ;
-        else if (ft_lstlast(*stack_a)->index == 1)
-            r_rot_a(stack_a, 1);
-        else
-            rot_a(stack_a, 1);
-        tmp = *stack_a;
-    }
-    push_b(stack_a, stack_b, 1);
-    sort_4(stack_a, stack_b);
-    push_a(stack_a, stack_b, 1);
-    swap_a(stack_a, 1);
-}
-
-int get_index(t_stack *tmp, int value)
-{
-    int		i;
-
-    i = 0;
-    while (tmp)
-    {
-        if (tmp->value < value)
-            i++;
-        tmp = tmp->next;
-    }
-    return (i);
-}
-
-void    indexing_stack(t_stack *to_stack)
-{
-    t_stack	*tmp;
-
-    tmp = to_stack;
-    while (tmp)
-    {
-        tmp->index = get_index(to_stack, tmp->value);
-        tmp = tmp->next;
-    }
-}
-
-void	print_stack(t_stack *stack)
-{
-	t_stack	*tmp;
-
-	tmp = stack;
-	while (tmp)
-	{
-		printf("value: %d index: %d\n", tmp->value, tmp->index);
-		tmp = tmp->next;
-	}
-}
-
-void	spec(t_stack **sta, t_stack **stb)
-{
-	indexing_stack(*sta);
-	if (count_stack(sta) == 4)
-		sort_4(sta, stb);
-	else
-		sort_5(sta, stb);
-	// print_stack(*sta);
-}
-
 void	logic(t_stack **a, t_stack **b)
 {
 	t_stack	*sta;
@@ -160,7 +70,7 @@ void	logic(t_stack **a, t_stack **b)
 	sta = *a;
 	stb = *b;
 	c = count_stack(&sta);
-	if ( c == 4 || c == 5)
+	if (c == 4 || c == 5)
 	{
 		spec(&sta, &stb);
 		*a = sta;

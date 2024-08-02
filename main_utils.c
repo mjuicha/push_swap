@@ -6,7 +6,7 @@
 /*   By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 15:18:54 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/08/01 16:20:54 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/08/02 17:39:27 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,8 +86,6 @@ void	fill_stack(t_stack **stack, char **av)
 	while (av[i])
 	{
 		res = ft_atoi(av[i]);
-		if (res > INT_MAX || res < INT_MIN)
-			push_swap_error(stack);
 		ft_lstadd_back(stack, ft_lstnew(res));
 		i++;
 	}

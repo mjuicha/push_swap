@@ -6,13 +6,13 @@
 /*   By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 14:02:30 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/08/01 16:25:10 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/08/02 18:20:39 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	done_a(t_stack **a, t_stack *node, int *pi, t_stack **b)
+void	done_a(t_stack **a, t_stack *node, int *pi)
 {
 	t_stack	**sta;
 	int		size_a;
@@ -25,13 +25,8 @@ void	done_a(t_stack **a, t_stack *node, int *pi, t_stack **b)
 	size_a = count_stack(sta);
 	while (*sta != NULL && (*sta)->value != node->value)
 	{
-		(void)b;
 		if (node == NULL)
 			return ;
-		// else if (node->index > size_a / 2 && rrboth(*a, *b))
-		// 	rrr0(sta, a, b, &c);
-		// else if (node->index <= size_a / 2 && rboth(*a, *b))
-		// 	rr0(sta, a, b, &c);
 		else if (node->index <= size_a / 2)
 			ra(sta, &c, 0);
 		else if (node->index > size_a / 2)

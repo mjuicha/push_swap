@@ -1,6 +1,0 @@
-if (check_asc(&sta) == 1)
-	{
-		printf("error");
-		return ;
-	}
-thi may cause a problem in algo.c

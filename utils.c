@@ -6,7 +6,7 @@
 /*   By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 10:42:09 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/08/01 21:22:15 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/08/02 19:54:06 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,16 @@ char	*ft_strjoin(char *s1, char *s2)
 	nstr[i] = '\0';
 	free((char *)s1);
 	return (nstr);
+}
+
+void	ft_error(void)
+{
+	write(2, "Error\n", 6);
+	exit(0);
+}
+
+void	push_swap_error(t_stack **stack)
+{
+	free_stack(*stack);
+	ft_error();
 }

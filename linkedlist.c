@@ -6,12 +6,11 @@
 /*   By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 10:29:12 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/08/02 16:23:53 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/08/02 19:50:43 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
 
 void	free_2d_array(char **av)
 {
@@ -25,6 +24,7 @@ void	free_2d_array(char **av)
 	}
 	free(av);
 }
+
 //return the last element of the list
 t_stack	*ft_lstlast(t_stack *lst)
 {
@@ -61,31 +61,4 @@ t_stack	*ft_lstnew(int content)
 	new->value = content;
 	new->next = NULL;
 	return (new);
-}
-
-//return the size of the list
-int	ft_lstsize(t_stack *lst)
-{
-	int		i;
-
-	i = 0;
-	while (lst)
-	{
-		lst = lst->next;
-		i++;
-	}
-	return (i);
-}
-//error message
-void	ft_error(void)
-{
-	write(2, "Error\n", 6);
-	exit(0);
-}
-
-//error message and free the stack
-void	push_swap_error(t_stack **stack)
-{
-	free_stack(*stack);
-	ft_error();
 }
