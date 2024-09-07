@@ -6,16 +6,11 @@
 /*   By: mjuicha <mjuicha@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 16:59:11 by mjuicha           #+#    #+#             */
-/*   Updated: 2024/08/02 20:33:50 by mjuicha          ###   ########.fr       */
+/*   Updated: 2024/08/02 20:42:10 by mjuicha          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-// void	l()
-// {
-// 	system("leaks push_swap");
-// }
 
 int	main(int ac, char **av)
 {
